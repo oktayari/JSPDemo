@@ -1,0 +1,37 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<table class="tableList">
+    <thead>
+        <tr class="tableHeading">
+            <th>Kullanici</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Email</th>
+            <th>K.Tarihi</th>
+            <th>Roller</th>
+            <th colspan=2></th>
+        </tr>
+    </thead>
+    <tbody>
+        <c:forEach items="${allUsers}" var="user">
+            <tr class="${((iter.index % 2) == 1) ? 'lightBlue' : 'white'} tableRow">
+                <td><c:out value="${user.userName}" /></td>
+                <td><c:out value="${user.firstName}" /></td>
+                <td><c:out value="${user.lastName}" /></td>
+                 <td><c:out value="${user.email}" /></td>
+                <td><fmt:formatDate pattern="yyyy-MMM-dd" 
+                                value="${user.creationDate}" /></td>
+                <td>
+                    <c:if test="${user.rolestCollection != null}">
+                        <c:forEach items="${user.rolestCollection}" var="rolest">
+                            <c:out value="${rolest.roleName}" />
+                        </c:forEach>
+                    </c:if>
+                </td>
+                <td><a href="UserController?page=${currentPage}&action=Edit&userName=${user.userName}">Duzenle</a></td>
+                <td><a href="UserController?action=Delete&userName=<c:out value="${user.userName}"/>">Sil</a></td>
+
+            </tr>
+        </c:forEach>
+    </tbody>
+</table>

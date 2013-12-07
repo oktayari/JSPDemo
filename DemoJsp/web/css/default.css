@@ -1,0 +1,153 @@
+
+body
+{}
+
+#contentWrapper
+{
+    margin: 0 auto;
+    width: 900px;
+}
+
+#header
+{
+    width: 900px;
+    height: 5em;
+    background-color: black;
+    color : white;
+    float: left;
+}
+
+#menuContainer
+{
+    background-color: coral;
+    color: white;
+    width:900px;
+    float: left;
+
+}
+
+#menu
+{
+    width:400px;
+    float: left;
+}
+
+#loginState
+{
+    float: right;
+}
+
+#mainContent
+{
+    width:900px;
+    min-height:500px; 
+    background-color: yellow;
+    color:black;
+    float: left;
+}
+
+#pages
+{
+    margin:5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+    border: solid 2px gray;
+}
+
+#footer
+{
+    clear: both ;
+    width: 900px;
+    height: 50px;
+    background-color: black;
+    color : white;
+    text-align: center;
+    float: left;
+
+}
+
+#userEdit
+{
+    float: left;
+    margin:10px 0 0 25px;
+    border: solid 1px gray;
+
+}
+
+#userImage
+{   float: left;
+    margin:10px 0 0 25px;
+    border: solid 1px gray;
+    float: left;
+    width: 200px;
+    height: 230px;
+}
+
+.tableHeading {
+    font-weight: bold;
+    background-color: #edf8f7;
+}
+
+.tableList { text-align: left }
+
+.tableList th { padding: 5px 5px }
+
+.tableList td {
+    padding: 5px 5px 5px 5px;
+    font-size: small;
+    font-family: "Courier New", courier, monospace;
+}
+.tableList td a
+{
+    float:left;
+    text-decoration:none;
+    color:white;
+    background-color:purple;
+    padding:0.2em 0.6em;
+    border-right:1px solid white;
+}
+
+.tableList td a:hover {background-color:#ff3300;}
+
+.lightBlue { background-color: #edf8f7 }
+
+.white { background-color: #fff }
+
+.loginBox {
+    position:absolute;
+    z-index:15;
+    top:20%;
+    left:20%;
+    margin: 0 0 0 0;
+    border: solid 1px #f5eabe;
+    background-color: #f5eabe;
+    border-radius: 4px;
+}
+
+ul
+{
+    float:left;
+    width:100%;
+    padding:0;
+    margin:0;
+    list-style-type:none;
+}
+
+ul a
+{
+    float:left;
+    width:5em;
+    height: 2em;
+    text-decoration:none;
+    color:white;
+    background-color:purple;
+    padding:0.2em 0.6em;
+    border-right:1px solid white;
+}
+
+ul a:hover {background-color:#ff3300;}
+
+li {display:inline;}
+
+
+
+

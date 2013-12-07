@@ -1,0 +1,7 @@
+
+<ul>
+    <li><a href="<%=request.getContextPath()%>/index.jsp">Ana Sayfa</a></li>
+    <li><a href="<%=request.getContextPath()%>/ortak/about.jsp">Hakkimizda</a></li>
+    <li><a href="<%=request.getContextPath()%>/ortak/contact.jsp">Iletisim</a></li>
+</ul>
+

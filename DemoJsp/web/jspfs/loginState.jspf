@@ -1,0 +1,34 @@
+<%@page import="org.oka.model.Userst"%>
+
+<jsp:useBean id="loginService" class="org.oka.bll.LoginService"  scope="session"/> 
+<%
+    Userst currentUser = (Userst) session.getValue("loggedInUser");
+    String requestContext = request.getContextPath();
+%>
+
+<ul>
+    <%
+     if (currentUser != null) {
+        if (loginService.isUserInRole("admin", currentUser)) {
+    %>
+
+    <li><a href= "<%=requestContext%>/admin/">Yonetim</a></li>
+    <li><a href= "<%=requestContext%>/UserController">Kullanicilar</a></li>
+        <%
+        } else if (loginService.isUserInRole("user", currentUser)) {
+        %>
+
+    <li><a href="<%=requestContext%>/users/">Islemler</a></li>
+    <li><a href="<%=requestContext%>/users/carpalim.jsp">Carpma</a></li>
+        <%}%>
+
+    <li><a href= "<%=requestContext%>/LoginController?action=ShowInfo&userName=<%=currentUser.getUserName()%>" >
+            <%= currentUser.toString()%></a></li>
+
+    <li><a href="<%=requestContext%>/LoginController?action=Logout">Cikis</a></li>
+        <% } else {%>
+    <li><a href="<%=requestContext%>/ortak/login.jsp">Giris</a></li>
+
+    <%}%>
+
+</ul>

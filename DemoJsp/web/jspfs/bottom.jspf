@@ -1,0 +1,12 @@
+</div>
+    </div>
+
+            <div id="footer">
+                <jsp:directive.include file="/jspfs/footer.jspf" />
+            </div>
+
+        </div>
+
+    </body>
+</html>
+

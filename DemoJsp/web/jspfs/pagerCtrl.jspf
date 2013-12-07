@@ -1,0 +1,28 @@
+
+
+<table border="0" cellpadding="5" cellspacing="5" style="background-color: coral">
+    <tr>
+
+    <c:if test="${currentPage != 1}">
+        <td><a href="?page=${currentPage - 1}"><<</a></td>
+    </c:if>
+
+    <c:forEach begin="1" end="${noOfPages}" var="i">
+        <c:choose>
+            <c:when test="${currentPage eq i}">
+                <td style="background-color: purple; color: white">${i}</td>
+            </c:when>
+            <c:otherwise>
+                <td><a href="?page=${i}">${i}</a></td>
+            </c:otherwise>
+        </c:choose>
+    </c:forEach>
+
+    <c:if test="${currentPage lt noOfPages}">
+        <td><a href="?page=${currentPage + 1}">>></a></td>
+    </c:if>
+
+</tr>
+</table>
+
+
